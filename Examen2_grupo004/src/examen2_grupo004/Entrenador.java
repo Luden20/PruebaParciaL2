@@ -4,7 +4,7 @@ public class Entrenador extends Persona{
     private String[] Especializacion;
     private String Filial;
     private String Estado;
-    private LinkedHashMap<String,Equipo> ListaEntrenadores = new LinkedHashMap<String,Equipo>();
+    private LinkedHashMap<String,Entrenador> ListaEntrenadores = new LinkedHashMap<String,Entrenador>();
     public Entrenador(String Cedula, String Nombre, String Apellido, String[] Especializacion, String Filial, String Estado){
           super(Cedula,Nombre,Apellido);
           this.Especializacion = Especializacion;
@@ -29,10 +29,10 @@ public class Entrenador extends Persona{
     public String getEstado(){
         return this.Estado;
     }
-    public void IngresoRegistro(Equipos Equipo){ 
-        ListaEntrenadores.put(Equipos.getCodigo(),Equipo);
+    public void IngresoRegistro(Entrenador Entrenadores){ 
+        ListaEntrenadores.put(Entrenadores.getCedula(),Entrenadores);
     }
-    public LinkedHashMap<String,Equipos> getListaEquipos(){
+    public LinkedHashMap<String,Entrenador> getListaEntrenadores(){
         return this.ListaEntrenadores;
     }
 }
