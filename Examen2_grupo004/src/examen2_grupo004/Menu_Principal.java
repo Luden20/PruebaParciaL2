@@ -4,6 +4,16 @@
  */
 package examen2_grupo004;
 
+import static java.awt.PageAttributes.MediaType.D;
+import static java.util.GregorianCalendar.AD;
+import java.util.LinkedHashMap;
+import java.util.Map;
+import static javax.swing.text.html.HTML.Tag.P;
+import org.jfree.chart.ChartFactory;
+import org.jfree.chart.ChartFrame;
+import org.jfree.chart.JFreeChart;
+import org.jfree.data.category.DefaultCategoryDataset;
+
 /**
  *
  * @author polip
@@ -28,9 +38,10 @@ public class Menu_Principal extends javax.swing.JFrame {
 
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(new java.awt.GridLayout(2, 1, 200, 100));
+        getContentPane().setLayout(new java.awt.GridLayout(3, 1, 200, 100));
 
         jButton1.setText("Ingreso");
         getContentPane().add(jButton1);
@@ -43,12 +54,35 @@ public class Menu_Principal extends javax.swing.JFrame {
         });
         getContentPane().add(jButton2);
 
+        jButton3.setText("Graficar");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton3);
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+
+            //Misma logica que el graficar pastel pero con barras
+            DefaultCategoryDataset datos = new DefaultCategoryDataset();
+                   for (Map.Entry<String, Deportista> entry : Deportistas.entrySet()) 
+            {
+                datos.addValue(entry.getValue().getMovimientosint(),entry.getValue().getApellido(),entry.getValue().getApellido());
+            }
+            JFreeChart grafico = ChartFactory.createBarChart("Deportistas", "Deportita", "Cantidad de equipos", datos);
+            ChartFrame frame = new ChartFrame("Grafico de barras", grafico);
+            frame.setVisible(true);
+            frame.setSize(800, 600);
+        
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -88,5 +122,7 @@ public class Menu_Principal extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     // End of variables declaration//GEN-END:variables
+    private LinkedHashMap<String,Deportista> Deportistas;
 }
