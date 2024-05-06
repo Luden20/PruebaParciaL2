@@ -44,7 +44,7 @@ public class Deportista extends Persona {
     }
     public Object[]getInfo()
     {
-        return new Object[]{};
+        return new Object[]{super.getCedula(),super.getApellido(),super.getNombre(),getDisciplina(),getNivel()};
     }
     
     
