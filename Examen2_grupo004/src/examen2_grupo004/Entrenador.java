@@ -30,9 +30,9 @@ public class Entrenador extends Persona{
         return this.Estado;
     }
     public void IngresoRegistro(Equipos Equipo){ 
-        ListaEntrenadores.put(Equipos.getNroCita(),Equipos);
+        ListaEntrenadores.put(Equipos.getCodigo(),Equipos);
     }
-    public LinkedHashMap<String,Ficha_Medica> getListaCitas(){
-        return this.ListaCitas;
+    public LinkedHashMap<String,Equipos> getListaEquipos(){
+        return this.ListaEntrenadores;
     }
 }
