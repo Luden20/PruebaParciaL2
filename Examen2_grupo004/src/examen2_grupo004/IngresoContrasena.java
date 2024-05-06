@@ -33,7 +33,7 @@ public class IngresoContrasena extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         ButtonIngreso = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         getContentPane().setLayout(new java.awt.GridLayout(3, 2, 50, 0));
 
         jLabel1.setText("Usuario");
@@ -82,6 +82,7 @@ public class IngresoContrasena extends javax.swing.JFrame {
                 Menu_Principal a = new Menu_Principal();
                 a.setSize(900,900);
                 a.setVisible(true);
+                dispose();
             }
         }
     }//GEN-LAST:event_ButtonIngresoActionPerformed
