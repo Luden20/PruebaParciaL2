@@ -24,9 +24,6 @@ public class Entrenador extends Persona{
     public String getFilial(){
         return this.Filial;
     }
-    public void IngresoRegistro(Entrenador Entrenadores){ 
-        ListaEntrenadores.put(Entrenadores.getCedula(),Entrenadores);
-    }
     public LinkedHashMap<String,Entrenador> getListaEntrenadores(){
         return this.ListaEntrenadores;
     }
