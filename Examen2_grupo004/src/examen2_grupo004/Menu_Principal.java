@@ -44,6 +44,11 @@ public class Menu_Principal extends javax.swing.JFrame {
         getContentPane().setLayout(new java.awt.GridLayout(3, 1, 200, 100));
 
         jButton1.setText("Ingreso");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton1);
 
         jButton2.setText("Buscar");
@@ -83,6 +88,11 @@ public class Menu_Principal extends javax.swing.JFrame {
             frame.setSize(800, 600);
         
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
