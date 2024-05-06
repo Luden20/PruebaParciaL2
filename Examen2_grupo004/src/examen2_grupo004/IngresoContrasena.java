@@ -29,7 +29,7 @@ public class IngresoContrasena extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         USER = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
-        PASSWORD = new javax.swing.JPasswordField();
+        provisional = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
 
@@ -48,7 +48,13 @@ public class IngresoContrasena extends javax.swing.JFrame {
 
         jLabel2.setText("Contraseña");
         getContentPane().add(jLabel2);
-        getContentPane().add(PASSWORD);
+
+        provisional.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                provisionalActionPerformed(evt);
+            }
+        });
+        getContentPane().add(provisional);
         getContentPane().add(jLabel3);
 
         jButton1.setText("Ingresar");
@@ -69,12 +75,19 @@ public class IngresoContrasena extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         Object p ="admin";
-        if("admin".equals(USER.getText()) && PASSWORD.equals(p))
+        if ("admin".equals(USER.getText()))
         {
-            System.out.print("correcto");
+            if ("p".equals(provisional.getText()))
+            {
+                System.out.print("Correcto");
+            }
         }
-        
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void provisionalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_provisionalActionPerformed
+        // TODO add your handling code here:
+
+    }//GEN-LAST:event_provisionalActionPerformed
 
     /**
      * @param args the command line arguments
@@ -112,11 +125,11 @@ public class IngresoContrasena extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPasswordField PASSWORD;
     private javax.swing.JTextField USER;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JTextField provisional;
     // End of variables declaration//GEN-END:variables
 }
