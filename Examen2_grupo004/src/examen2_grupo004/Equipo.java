@@ -23,5 +23,25 @@ public class Equipo {
         EntrenadoresPasados.put(COACH.getCedula(),COACH);
         this.COACH = COACH;
     }
-    public void 
+    public String Nombre(){
+        return this.NombreEquipo;
+    }
+    public String Codigo(){
+        return this.Codigo;
+    }
+    public boolean BuscarDeportista(Deportista Jugador){
+        if (this.MiembrosActuales.containsKey(Jugador.Cedula)){
+            return true;
+        }
+        return false;
+    }
+    public LinkedHashMap getMiembrosActuales(){
+        return this.MiembrosActuales;
+    }
+    public LinkedHashMap getMiembrosPasados(){
+        return this.MiembrosPasados;
+    }
+    public LinkedHashMap getEntrenadoresPasados(){
+        return this.getEntrenadoresPasados();
+    }
 }
