@@ -18,6 +18,22 @@ public class Deportista extends Persona {
         this.Disciplina=Disciplina;
         this.Nivel=Nivel;
     }
+    
+    public String getCedula()
+    {
+        return super.getCedula();
+    }
+    
+    public String getNombre()
+    {
+        return super.getNombre();
+    }
+    
+    public String getApellido()
+    {
+        return super.getApellido();
+    }
+    
     public String getDisciplina()
     {
         return Disciplina;
