@@ -1,8 +1,8 @@
 package examen2_grupo004;
 public class Persona {
-    private String Cedula;
-    private String Nombre;
-    private String Apellido;
+    protected String Cedula;
+    protected String Nombre;
+    protected String Apellido;
     
     public Persona(String Cedula, String Nombre, String Apellido){
         this.Cedula = Cedula;
