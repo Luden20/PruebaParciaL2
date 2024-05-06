@@ -4,18 +4,16 @@
  */
 package examen2_grupo004;
 
-import javax.swing.JOptionPane;
-
 /**
  *
  * @author polip
  */
-public class IngresoContrasena extends javax.swing.JFrame {
+public class Ingreso_Deportista extends javax.swing.JFrame {
 
     /**
-     * Creates new form IngresoContrasena
+     * Creates new form Ingreso_Deportista
      */
-    public IngresoContrasena() {
+    public Ingreso_Deportista() {
         initComponents();
     }
 
@@ -29,40 +27,43 @@ public class IngresoContrasena extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        USER = new javax.swing.JTextField();
+        Cedula = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
-        provisional = new javax.swing.JTextField();
+        Nombre = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
+        Apellido = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
+        Disciplina = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
+        Nivel = new javax.swing.JTextField();
+        jLabel6 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Ingreso");
-        getContentPane().setLayout(new java.awt.GridLayout(3, 2, 50, 0));
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new java.awt.GridLayout(6, 2));
 
-        jLabel1.setText("Usuario");
+        jLabel1.setText("Cedula");
         getContentPane().add(jLabel1);
+        getContentPane().add(Cedula);
 
-        USER.setToolTipText("Ingrese usuario");
-        USER.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                USERActionPerformed(evt);
-            }
-        });
-        getContentPane().add(USER);
-
-        jLabel2.setText("Contraseña");
+        jLabel2.setText("Nombre");
         getContentPane().add(jLabel2);
+        getContentPane().add(Nombre);
 
-        provisional.setToolTipText("Ingrese Contraseña");
-        provisional.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                provisionalActionPerformed(evt);
-            }
-        });
-        getContentPane().add(provisional);
+        jLabel3.setText("Apellido");
         getContentPane().add(jLabel3);
+        getContentPane().add(Apellido);
 
-        jButton1.setText("Ingresar");
+        jLabel4.setText("Discplina");
+        getContentPane().add(jLabel4);
+        getContentPane().add(Disciplina);
+
+        jLabel5.setText("Nivel");
+        getContentPane().add(jLabel5);
+        getContentPane().add(Nivel);
+        getContentPane().add(jLabel6);
+
+        jButton1.setText("Registrar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -73,34 +74,10 @@ public class IngresoContrasena extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void USERActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_USERActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_USERActionPerformed
-
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        Object p ="admin";
-        if ("admin".equals(USER.getText()))
-        {
-            if ("p".equals(provisional.getText()))
-            {
-                System.out.print("Correcto");
-                Menu_Principal a=new Menu_Principal();
-                a.setSize(900,900);
-                a.setVisible(true);
-                dispose();
-            }
-        }
-        else
-        {
-            JOptionPane.showMessageDialog(this,"Datos incorrectos", "Error", JOptionPane.ERROR_MESSAGE);
-        }
+        Deportista aux=new Deportista(Cedula.getText(),Nombre.getText(),Apellido.getText(),Disciplina.getText(),Nivel.getText());
     }//GEN-LAST:event_jButton1ActionPerformed
-
-    private void provisionalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_provisionalActionPerformed
-        // TODO add your handling code here:
-
-    }//GEN-LAST:event_provisionalActionPerformed
 
     /**
      * @param args the command line arguments
@@ -119,30 +96,36 @@ public class IngresoContrasena extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(IngresoContrasena.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Ingreso_Deportista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(IngresoContrasena.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Ingreso_Deportista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(IngresoContrasena.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Ingreso_Deportista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(IngresoContrasena.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Ingreso_Deportista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new IngresoContrasena().setVisible(true);
+                new Ingreso_Deportista().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField USER;
+    private javax.swing.JTextField Apellido;
+    private javax.swing.JTextField Cedula;
+    private javax.swing.JTextField Disciplina;
+    private javax.swing.JTextField Nivel;
+    private javax.swing.JTextField Nombre;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JTextField provisional;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     // End of variables declaration//GEN-END:variables
 }
