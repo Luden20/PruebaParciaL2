@@ -83,6 +83,7 @@ public class Ingreso_Deportista extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         Equipo aux1 = ListaDEquipos.get(CB_EQUIPO.getSelectedItem().toString());
         Deportista aux=new Deportista(Cedula.getText(),Nombre.getText(),Apellido.getText(),Disciplina.getText(),Nivel.getText(),aux1);
+        ListaDDeportista.put(aux.getCedula(), aux);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
