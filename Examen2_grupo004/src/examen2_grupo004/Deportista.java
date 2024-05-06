@@ -1,22 +1,24 @@
+    /*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
 package examen2_grupo004;
-import java.util.LinkedHashMap;
-import java.util.Stack;
+
+/**
+ *
+ * @author polip
+ */
 public class Deportista extends Persona {
     private String Disciplina;
     private String Nivel;
-    private LinkedHashMap<String,Equipo> ListaDEquipoPasados = new LinkedHashMap<String,Equipo>();
-    private Stack<String> Movimientos = new Stack<String>();
-    private Equipo Actual;
-    public Deportista(String Cedula, String Nombre, String Apellido,String Disciplina,String Nivel,Equipo Actual)
+    
+    public Deportista(String Cedula, String Nombre, String Apellido,String Disciplina,String Nivel)
     {
         super(Cedula,Nombre,Apellido);
         this.Disciplina=Disciplina;
         this.Nivel=Nivel;
-        this.Actual=Actual;
     }
-    public void CambioEquipo(Equipo Actual){
-        this.Movimientos.add("Del equipo "+this.Actual.Nombre()+" se mueve a "+ Actual.Nombre());
-    }
+    
     public String getCedula()
     {
         return super.getCedula();
@@ -44,8 +46,6 @@ public class Deportista extends Persona {
     {
         return new Object[]{super.getCedula(),super.getApellido(),super.getNombre(),getDisciplina(),getNivel()};
     }
-    public Stack getMovimientos(){
-        return this.Movimientos;
-    }
+    
     
 }

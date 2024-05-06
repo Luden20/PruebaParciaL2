@@ -4,8 +4,6 @@
  */
 package examen2_grupo004;
 
-import javax.swing.JOptionPane;
-
 /**
  *
  * @author polip
@@ -31,18 +29,16 @@ public class IngresoContrasena extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         USER = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
-        provisional = new javax.swing.JTextField();
+        PASSWORD = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        ButtonIngreso = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Ingreso");
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new java.awt.GridLayout(3, 2, 50, 0));
 
         jLabel1.setText("Usuario");
         getContentPane().add(jLabel1);
 
-        USER.setToolTipText("Ingrese usuario");
         USER.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 USERActionPerformed(evt);
@@ -53,22 +49,21 @@ public class IngresoContrasena extends javax.swing.JFrame {
         jLabel2.setText("Contraseña");
         getContentPane().add(jLabel2);
 
-        provisional.setToolTipText("Ingrese Contraseña");
-        provisional.addActionListener(new java.awt.event.ActionListener() {
+        PASSWORD.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                provisionalActionPerformed(evt);
+                PASSWORDActionPerformed(evt);
             }
         });
-        getContentPane().add(provisional);
+        getContentPane().add(PASSWORD);
         getContentPane().add(jLabel3);
 
-        jButton1.setText("Ingresar");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        ButtonIngreso.setText("Ingresar");
+        ButtonIngreso.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                ButtonIngresoActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1);
+        getContentPane().add(ButtonIngreso);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -77,30 +72,22 @@ public class IngresoContrasena extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_USERActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void ButtonIngresoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonIngresoActionPerformed
         // TODO add your handling code here:
         Object p ="admin";
         if ("admin".equals(USER.getText()))
         {
-            if ("p".equals(provisional.getText()))
+            if ("p".equals(PASSWORD.getText()))
             {
                 System.out.print("Correcto");
-                Menu_Principal a=new Menu_Principal();
-                a.setSize(900,900);
-                a.setVisible(true);
-                dispose();
             }
         }
-        else
-        {
-            JOptionPane.showMessageDialog(this,"Datos incorrectos", "Error", JOptionPane.ERROR_MESSAGE);
-        }
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_ButtonIngresoActionPerformed
 
-    private void provisionalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_provisionalActionPerformed
+    private void PASSWORDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PASSWORDActionPerformed
         // TODO add your handling code here:
 
-    }//GEN-LAST:event_provisionalActionPerformed
+    }//GEN-LAST:event_PASSWORDActionPerformed
 
     /**
      * @param args the command line arguments
@@ -138,11 +125,11 @@ public class IngresoContrasena extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton ButtonIngreso;
+    private javax.swing.JTextField PASSWORD;
     private javax.swing.JTextField USER;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JTextField provisional;
     // End of variables declaration//GEN-END:variables
 }
