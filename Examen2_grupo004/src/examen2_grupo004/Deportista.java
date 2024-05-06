@@ -36,11 +36,11 @@ public class Deportista extends Persona {
     
     public String getDisciplina()
     {
-        return Disciplina;
+        return this.Disciplina;
     }
     public String getNivel()
     {
-        return Nivel;
+        return this.Nivel;
     }
     public Object[]getInfo()
     {
