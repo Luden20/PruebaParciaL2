@@ -79,7 +79,9 @@ public class IngresoContrasena extends javax.swing.JFrame {
         {
             if ("p".equals(PASSWORD.getText()))
             {
-                System.out.print("Correcto");
+                Menu_Principal a = new Menu_Principal();
+                a.setSize(900,900);
+                a.setVisible(true);
             }
         }
     }//GEN-LAST:event_ButtonIngresoActionPerformed
