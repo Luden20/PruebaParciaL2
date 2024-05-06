@@ -30,7 +30,7 @@ public class Entrenador extends Persona{
         return this.Estado;
     }
     public void IngresoRegistro(Equipos Equipo){ 
-        ListaEntrenadores.put(Equipos.getCodigo(),Equipos);
+        ListaEntrenadores.put(Equipos.getCodigo(),Equipo);
     }
     public LinkedHashMap<String,Equipos> getListaEquipos(){
         return this.ListaEntrenadores;
