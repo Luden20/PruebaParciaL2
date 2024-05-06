@@ -23,10 +23,10 @@ public class Equipo {
         EntrenadoresPasados.put(COACH.getCedula(),COACH);
         this.COACH = COACH;
     }
-    public String Nombre(){
+    public String getNombre(){
         return this.NombreEquipo;
     }
-    public String Codigo(){
+    public String getCodigo(){
         return this.Codigo;
     }
     public boolean BuscarDeportista(Deportista Jugador){
